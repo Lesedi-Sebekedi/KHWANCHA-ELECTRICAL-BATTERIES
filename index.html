@@ -1,763 +1,1099 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KHWANCHA ELECTRICAL BATTERIES - Solar & Electrical Solutions</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root {
-      --primary: #c00;
-      --secondary: #0066cc;
-      --dark: #111;
-      --light: #f4f4f4;
-      --gray: #777;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      scroll-behavior: smooth;
-    }
-    
-    a {
-      text-decoration: none;
-      color: var(--secondary);
-      transition: all 0.3s ease;
-    }
-    
-    a:hover {
-      color: var(--primary);
-    }
-    
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    .btn {
-      display: inline-block;
-      background: var(--primary);
-      color: white;
-      padding: 12px 24px;
-      border-radius: 4px;
-      text-transform: uppercase;
-      font-weight: bold;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .btn:hover {
-      background: #a00;
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    /* Header & Navigation */
-    header {
-      background: var(--dark);
-      color: white;
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .logo h1 {
-      font-size: 1.8rem;
-      margin: 0;
-    }
-    
-    .logo span {
-      color: var(--primary);
-    }
-    
-    .logo p {
-      font-size: 0.9rem;
-      margin: 0;
-      color: #ccc;
-    }
-    
-    nav ul {
-      display: flex;
-      list-style: none;
-    }
-    
-    nav ul li {
-      margin-left: 2rem;
-    }
-    
-    nav ul li a {
-      color: white;
-      font-weight: 500;
-    }
-    
-    nav ul li a:hover {
-      color: var(--primary);
-    }
-    
-    .menu-toggle {
-      display: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 6rem 0;
-      text-align: center;
-    }
-    
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    
-    /* Sections */
-    section {
-      padding: 5rem 0;
-    }
-    
-    .section-title {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    
-    .section-title h2 {
-      font-size: 2.2rem;
-      color: var(--dark);
-      margin-bottom: 1rem;
-      position: relative;
-      display: inline-block;
-    }
-    
-    .section-title h2::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 3px;
-      background: var(--primary);
-    }
-    
-    /* About Section */
-    .about-content {
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-    }
-    
-    .about-text {
-      flex: 1;
-    }
-    
-    .about-image {
-      flex: 1;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .about-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    /* Services Section */
-    .services {
-      background: var(--light);
-    }
-    
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    
-    .service-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
-    }
-    
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    }
-    
-    .service-icon {
-      font-size: 3rem;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-    
-    .service-card h3 {
-      margin-bottom: 1rem;
-      color: var(--dark);
-    }
-    
-    /* Vision Section */
-    .vision {
-      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1621510456687-4d448377a9b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
-      background-size: cover;
-      background-position: center;
-      color: white;
-    }
-    
-    /* Testimonials */
-    .testimonials-container {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    
-    .testimonial {
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      margin: 2rem 0;
-    }
-    
-    .testimonial-text {
-      font-style: italic;
-      margin-bottom: 1rem;
-    }
-    
-    .testimonial-author {
-      font-weight: bold;
-      color: var(--dark);
-    }
-    
-    /* Contact Section */
-    .contact {
-      background: var(--light);
-    }
-    
-    .contact-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
-    }
-    
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-    
-    .contact-icon {
-      font-size: 1.5rem;
-      color: var(--primary);
-    }
-    
-    .contact-details h3 {
-      margin-bottom: 0.5rem;
-    }
-    
-    .socials {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    
-    .socials a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background: var(--dark);
-      color: white;
-      border-radius: 50%;
-      transition: all 0.3s ease;
-    }
-    
-    .socials a:hover {
-      background: var(--primary);
-      transform: translateY(-3px);
-    }
-    
-    .map {
-      border-radius: 8px;
-      overflow: hidden;
-      height: 300px;
-    }
-    
-    .map iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-    
-    /* Contact Form */
-    .contact-form {
-      background: white;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-    
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-    }
-    
-    .form-control {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-family: inherit;
-      font-size: 1rem;
-    }
-    
-    textarea.form-control {
-      min-height: 150px;
-      resize: vertical;
-    }
-    
-    /* Footer */
-    footer {
-      background: var(--dark);
-      color: white;
-      padding: 3rem 0 1rem;
-    }
-    
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-    
-    .footer-column h3 {
-      color: var(--primary);
-      margin-bottom: 1.5rem;
-      font-size: 1.2rem;
-    }
-    
-    .footer-column ul {
-      list-style: none;
-    }
-    
-    .footer-column ul li {
-      margin-bottom: 0.8rem;
-    }
-    
-    .footer-column ul li a {
-      color: #ccc;
-    }
-    
-    .footer-column ul li a:hover {
-      color: white;
-    }
-    
-    .copyright {
-      text-align: center;
-      padding-top: 2rem;
-      border-top: 1px solid #444;
-      color: #ccc;
-      font-size: 0.9rem;
-    }
-    
-    /* Responsive Design */
-    @media (max-width: 992px) {
-      .about-content {
-        flex-direction: column;
-      }
-      
-      .about-image {
-        order: -1;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-      
-      nav {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 80%;
-        height: calc(100vh - 70px);
-        background: var(--dark);
-        transition: all 0.3s ease;
-      }
-      
-      nav.active {
-        left: 0;
-      }
-      
-      nav ul {
-        flex-direction: column;
-        padding: 2rem;
-      }
-      
-      nav ul li {
-        margin: 1rem 0;
-      }
-      
-      .hero h2 {
-        font-size: 2rem;
-      }
-      
-      .hero p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khwancha Electrical Batteries | Powering Africa's EV Revolution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #bc4703;
+            --secondary: #222222;
+            --accent: #6f9700;
+            --light: #f8f9fa;
+            --dark: #161616;
+            --gray: #6c757d;
+        }
+
+        .logo-img {
+            height: 40px; /* Adjust based on your logo dimensions */
+            width: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 5px 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled nav {
+            padding: 10px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 150px 0 100px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2300cc99' fill-opacity='0.1' d='M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,218.7C672,224,768,160,864,138.7C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            animation: fadeIn 1.5s ease-in;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #00b386;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Market Opportunity Section */
+        .market-opportunity {
+            background-color: #f1f5f9;
+        }
+        
+        .market-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .market-chart {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .chart-bars {
+            display: flex;
+            align-items: flex-end;
+            height: 200px;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 30px;
+            padding: 0 20px;
+        }
+        
+        .chart-bar {
+            width: 40px;
+            background-color: var(--primary);
+            position: relative;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            transition: height 1.5s ease-in-out;
+            height: 0;
+        }
+        
+        .chart-bar span {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+        }
+        
+        .chart-bar .value {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .market-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        /* Products Section */
+        .products {
+            background-color: white;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-image:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2300cc99' fill-opacity='0.2' d='M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,218.7C672,224,768,160,864,138.7C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+        
+        /* Strategy Section */
+        .strategy {
+            background-color: #f1f5f9;
+        }
+        
+        .strategy-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .strategy-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .strategy-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .strategy-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .strategy-card h3 i {
+            margin-right: 10px;
+        }
+        
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            background-color: var(--secondary);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-item:nth-child(2n) {
+            background-color: var(--primary);
+        }
+        
+        .gallery-item:nth-child(3n) {
+            background-color: var(--accent);
+        }
+        
+        /* Investment Section */
+        .investment {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .investment:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2300cc99' fill-opacity='0.1' d='M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,218.7C672,224,768,160,864,138.7C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .investment-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .investment-content h2 {
+            color: white;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .feature {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        
+        .company-details {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        /* Notification */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateX(150%);
+            transition: transform 0.3s ease;
+            z-index: 10000;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes grow {
+            from {
+                height: 0;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .chart-bars {
+                gap: 15px;
+            }
+            
+            .chart-bar {
+                width: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Header & Navigation -->
-  <header>
-    <div class="container header-container">
-      <div class="logo">
-        <h1>KHWANCHA <span>ELECTRICAL</span> BATTERIES</h1>
-        <p>Powering homes and businesses</p>
-      </div>
-      
-      <div class="menu-toggle" id="menuToggle">
-        <i class="fas fa-bars"></i>
-      </div>
-      
-      <nav id="mainNav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#vision">Vision</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        Thank you for your message. We will get back to you soon!
     </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="container hero-content">
-      <h2>Reliable Solar & Electrical Solutions</h2>
-      <p>Expert installation of solar panels, batteries, and backup power systems for homes and businesses in Mahikeng and Midrand.</p>
-      <a href="#contact" class="btn">Get Free Consultation</a>
-    </div>
-  </section>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                <img src=".\images\logo.png" alt="Khwancha Batteries Logo" class="logo-img">
+                KHWANCHA BATTERIES
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#market">Market</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#strategy">Strategy</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#investment">Investment</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <div class="section-title">
-        <h2>About Us</h2>
-      </div>
-      
-      <div class="about-content">
-        <div class="about-text">
-          <p>KHWANCHA ELECTRICAL BATTERIES specializes in electrical and solar energy solutions, providing reliable power for homes and businesses across Mahikeng and Midrand.</p>
-          <p>With years of industry experience, our team of certified technicians delivers top-quality installations and maintenance services for all your energy needs.</p>
-          <p>We are committed to sustainable energy solutions that help reduce electricity costs while ensuring uninterrupted power supply.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Powering Africa's Electric Mobility Revolution</h1>
+            <p>Khwancha Electrical Batteries will manufacture electrical batteries and their compatible chargers.</p>
+            <a href="#contact" class="btn">Contact Us</a>
         </div>
-        
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Solar Panel Installation">
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <div class="container">
-      <div class="section-title">
-        <h2>Our Services</h2>
-      </div>
-      
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-solar-panel"></i>
-          </div>
-          <h3>Solar Panel Installation</h3>
-          <p>Professional installation of high-efficiency solar panels for residential and commercial properties.</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-car-battery"></i>
-          </div>
-          <h3>Battery Solutions</h3>
-          <p>Supply and installation of quality batteries for solar systems and backup power.</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-bolt"></i>
-          </div>
-          <h3>Backup Power Systems</h3>
-          <p>Reliable backup power solutions to keep your home or business running during outages.</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-tools"></i>
-          </div>
-          <h3>Electrical Accessories</h3>
-          <p>Comprehensive range of electrical components and accessories for all your needs.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Vision Section -->
-  <section id="vision" class="vision">
-    <div class="container">
-      <div class="section-title">
-        <h2 style="color: white;">Our Vision</h2>
-      </div>
-      
-      <div class="about-content">
-        <div class="about-text">
-          <p>Khwancha Electrical Batteries Co. (Pty) Ltd is a battery technology startup focused on electric vehicle (EV) batteries. Our primary mission is to manufacture advanced lithium-ion batteries for EVs, aiming to serve as a homegrown supplier for Africa's emerging electric mobility market in South Africa.</p>
-          <p>Khwancha's long-term ambition is to accelerate Africa's transition to clean transportation by developing local battery production capabilities and sustainable energy solutions.</p>
-        </div>
-        
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Electric Vehicle Battery">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <div class="container">
-      <div class="section-title">
-        <h2>What Our Customers Say</h2>
-      </div>
-      
-      <div class="testimonials-container">
-        <div class="testimonial">
-          <div class="testimonial-text">
-            <p>"KHWANCHA ELECTRICAL installed a solar system for my home, and I couldn't be happier. Their professionalism and expertise were evident throughout the process. I've already seen a significant reduction in my electricity bills!"</p>
-          </div>
-          <div class="testimonial-author">
-            <p>- James M., Mahikeng</p>
-          </div>
-        </div>
-        
-        <div class="testimonial">
-          <div class="testimonial-text">
-            <p>"The backup power system they installed at my business has been a game-changer. No more interruptions during load shedding. Highly recommend their services!"</p>
-          </div>
-          <div class="testimonial-author">
-            <p>- Sarah K., Midrand</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="section-title">
-        <h2>Contact Us</h2>
-      </div>
-      
-      <div class="contact-container">
-        <div>
-          <div class="contact-info">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="contact-details">
-                <h3>Head Office</h3>
-                <p>1693 Makhene Drive, Unit 6, Mahikeng</p>
-              </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Khwancha Batteries</h2>
+                <p>Accelerating Africa's transition to clean transportation</p>
             </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Vision</h3>
+                    <p>Khwancha Electrical Batteries Co. (Pty) Ltd is a battery technology startup focused on electric vehicle (EV) batteries. Our primary mission is to manufacture advanced lithium-ion batteries for EVs, aiming to serve as a homegrown supplier for Africa's emerging electric mobility market in South Africa.</p>
+                    <p>Our long-term ambition is to build accelerating Africa's transition to clean transportation by developing local battery production capabilities and reducing reliance on imports.</p>
+                    <p>We're positioning ourselves in the market as 'the EV battery company,' aiming to become synonymous with locally-made EV power solutions.</p>
+                </div>
+                <div class="about-image">
+                    <div style="background-color: #003366; height: 100%; display: flex; align-items: center; justify-content: center; color: white;">
+                        <i class="fas fa-bolt" style="font-size: 5rem;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Opportunity Section -->
+    <section id="market" class="market-opportunity">
+        <div class="container">
+            <div class="section-title">
+                <h2>EV Market Opportunity in South Africa</h2>
+                <p>South Africa's EV adoption is in its early stages but is growing rapidly</p>
+            </div>
+            <div class="market-content">
+                <div class="market-chart">
+                    <h3>Annual Battery-Electric Vehicle (BEV) Sales</h3>
+                    <div class="chart-bars">
+                        <div class="chart-bar" data-height="40" data-value="152"><span>2018</span><div class="value">152</div></div>
+                        <div class="chart-bar" data-height="60" data-value="215"><span>2019</span><div class="value">215</div></div>
+                        <div class="chart-bar" data-height="50" data-value="182"><span>2020</span><div class="value">182</div></div>
+                        <div class="chart-bar" data-height="70" data-value="218"><span>2021</span><div class="value">218</div></div>
+                        <div class="chart-bar" data-height="90" data-value="306"><span>2022</span><div class="value">306</div></div>
+                        <div class="chart-bar" data-height="160" data-value="502"><span>2023</span><div class="value">502</div></div>
+                    </div>
+                </div>
+                <div class="market-text">
+                    <p>EV sales in South Africa remain a fraction of total vehicle sales, yet they have accelerated with more models available and rising fuel costs. This momentum continued into 2024 and is expected to grow.</p>
+                    <p>Local production of EV batteries will be vital to support this growth and reduce reliance on imports. Khwancha is positioned to capture this emerging market with our locally manufactured battery solutions.</p>
+                    <p>We're focusing on serving the growing demand from local EV manufacturers, commercial fleet operators, and EV conversion projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our EV Battery Solutions</h2>
+                <p>Advanced lithium-ion battery packs optimized for electric mobility</p>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>EV Battery Packs</h3>
+                        <p>Modular battery packs that power a range of EVs—from passenger cars and minibuses to commercial delivery vehicles.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Conversion Kits</h3>
+                        <p>Battery conversion kits and engineering support for EV retrofit projects, enabling combustion vehicles to be converted to electric drive.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Future Energy Solutions</h3>
+                        <p>Plans to expand into stationary energy storage, renewable energy integration, and battery recycling for a circular energy model.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategy Section -->
+    <section id="strategy" class="strategy">
+        <div class="container">
+            <div class="section-title">
+                <h2>Market Penetration Strategy</h2>
+                <p>Targeting key early adopter segments and partnerships</p>
+            </div>
+            <div class="strategy-content">
+                <div class="strategy-card">
+                    <h3><i class="fas fa-industry"></i> Local EV Manufacturers</h3>
+                    <p>Partnering with South African OEMs to supply batteries for locally manufactured electric vehicles, reducing their reliance on imported components.</p>
+                </div>
+                <div class="strategy-card">
+                    <h3><i class="fas fa-truck"></i> Commercial Fleet Operators</h3>
+                    <p>Targeting logistics/delivery companies, bus services, and corporate vehicle fleets that are experimenting with electrification to reduce costs.</p>
+                </div>
+                <div class="strategy-card">
+                    <h3><i class="fas fa-cogs"></i> EV Conversion Projects</h3>
+                    <p>Supporting enthusiast garages, tech startups, and academic institutions converting combustion vehicles to electric drive with custom battery solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Project Gallery</h2>
+                <p>Follow our journey from concept to manufacturing</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">Battery Technology</div>
+                <div class="gallery-item">Manufacturing Process</div>
+                <div class="gallery-item">EV Integration</div>
+                <div class="gallery-item">Testing Facility</div>
+                <div class="gallery-item">Team</div>
+                <div class="gallery-item">Partnerships</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section id="investment" class="investment">
+        <div class="container">
+            <div class="investment-content">
+                <div class="section-title">
+                    <h2>Investment Opportunity</h2>
+                    <p>Join us in building the future of energy storage in Africa</p>
+                </div>
+                <p>We're seeking strategic partners and investors to accelerate our manufacturing capabilities and bring our innovative battery technology to market. With prototypes already demonstrating superior performance, we're now ready to scale production.</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Market Potential</h3>
+                        <p>Growing EV market in South Africa with increasing demand for local battery production</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Proprietary Technology</h3>
+                        <p>Advanced lithium-ion battery technology optimized for African conditions and requirements</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <h3>Strategic Partnerships</h3>
+                        <p>Early partnerships with Leema Industries and other key players in the EV ecosystem</p>
+                    </div>
+                </div>
+                
+                <a href="#contact" class="btn">Express Investment Interest</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Reach out to discuss partnership or investment opportunities</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-user"></i> Mr Thato wa Magogodi, Managing Director</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Head Office: 1693 Makhene Drive, Unit 16 MAHIKENG</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 17 Terrace View Noorwyk MIDRAND</p>
+                    <p><i class="fas fa-envelope"></i> tmagogodi@gmail.com</p>
+                    
+                    <div class="company-details">
+                        <p><strong>Company Registration:</strong> 2024/248642/07</p>
+                        <p><strong>Tax Reference Number:</strong> 9959591182</p>
+                        <p><strong>B-BBEE Certificate:</strong> 9407735983</p>
+                    </div>
+                    
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">Interest</label>
+                            <select id="interest" class="form-control">
+                                <option value="">Select an option</option>
+                                <option value="investment">Investment Opportunity</option>
+                                <option value="partnership">Business Partnership</option>
+                                <option value="products">Product Information</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                <img src=".\images\footer.png" alt="Khwancha Batteries Logo" class="footer-logo">
+                <p>Developing next-generation battery technology for Africa's sustainable transportation future.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#market">Market</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#strategy">Strategy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Khwancha Electrical Batteries Co. (Pty) Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
+        // Close mobile navigation when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Animated chart bars
+        function animateChartBars() {
+            const chartBars = document.querySelectorAll('.chart-bar');
+            chartBars.forEach(bar => {
+                const height = bar.getAttribute('data-height');
+                bar.style.height = height + 'px';
+                bar.style.animation = 'grow 1.5s ease-in-out';
+            });
+        }
+        
+        // Check if element is in viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+        
+        // Animate chart when in viewport
+        let chartAnimated = false;
+        window.addEventListener('scroll', function() {
+            const chartSection = document.querySelector('.market-chart');
+            if (isInViewport(chartSection) && !chartAnimated) {
+                animateChartBars();
+                chartAnimated = true;
+            }
+        });
+        
+        // Trigger chart animation on page load if already in view
+        window.addEventListener('load', function() {
+            const chartSection = document.querySelector('.market-chart');
+            if (isInViewport(chartSection)) {
+                animateChartBars();
+                chartAnimated = true;
+            }
+        });
+        
+        // Form submission with notification
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="contact-details">
-                <h3>Branch</h3>
-                <p>17 Terrace View Noorwyk, Midrand</p>
-              </div>
-            </div>
+            // Show notification
+            const notification = document.getElementById('notification');
+            notification.classList.add('show');
             
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-details">
-                <h3>Email</h3>
-                <p><a href="mailto:firstsm76@gmail.com">firstsm76@gmail.com</a></p>
-              </div>
-            </div>
+            // Hide notification after 5 seconds
+            setTimeout(function() {
+                notification.classList.remove('show');
+            }, 5000);
             
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div class="contact-details">
-                <h3>Phone</h3>
-                <p><a href="tel:+27825907971">+27 82 590 7971</a></p>
-              </div>
-            </div>
-            
-            <div class="socials">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-whatsapp"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          
-          <div class="map" style="margin-top: 2rem;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14319.093494024207!2d25.633549430224605!3d-25.865637600000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9440c8dbfe1f81%3A0x35574fdaa554b5c3!2sMahikeng!5e0!3m2!1sen!2sza!4v1686749987651!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-        </div>
+            // Reset form
+            this.reset();
+        });
         
-        <div class="contact-form">
-          <h3>Send us a message</h3>
-          <form id="contactForm">
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" class="form-control" required></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-column">
-          <h3>KHWANCHA ELECTRICAL BATTERIES</h3>
-          <p>Providing reliable solar and electrical solutions for homes and businesses in South Africa.</p>
-        </div>
-        
-        <div class="footer-column">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-column">
-          <h3>Services</h3>
-          <ul>
-            <li><a href="#">Solar Panel Installation</a></li>
-            <li><a href="#">Battery Solutions</a></li>
-            <li><a href="#">Backup Power Systems</a></li>
-            <li><a href="#">Electrical Accessories</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="copyright">
-        <p>&copy; 2025 KHWANCHA ELECTRICAL BATTERIES. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
-    
-    menuToggle.addEventListener('click', () => {
-      mainNav.classList.toggle('active');
-    });
-    
-    // Close menu when clicking on a link
-    const navLinks = document.querySelectorAll('nav a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('active');
-      });
-    });
-    
-    // Simple form validation
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Thank you for your message! We will contact you shortly.');
-        this.reset();
-      });
-    }
-  </script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.getElementById('header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
