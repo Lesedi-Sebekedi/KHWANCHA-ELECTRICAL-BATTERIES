@@ -29,6 +29,23 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
+        .gallery-item {
+            background-size: cover;
+            background-position: center;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .gallery-item div {
+            background-color: rgba(0,0,0,0.6);
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
         body {
             line-height: 1.6;
             color: var(--dark);
@@ -855,15 +872,17 @@
                 <p>Follow our journey from concept to manufacturing</p>
             </div>
             <div class="gallery-grid">
-                <div class="gallery-item">Battery Technology</div>
-                <div class="gallery-item">Manufacturing Process</div>
-                <div class="gallery-item">EV Integration</div>
-                <div class="gallery-item">Testing Facility</div>
-                <div class="gallery-item">Team</div>
-                <div class="gallery-item">Partnerships</div>
+                <div class="gallery-item" style="background-image:url('images/photo0.jpeg');">
+                    <div>Conference Attendance</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('images/batteryprod.png');">
+                    <div>Sample Batteries</div>
+                </div>
+                </div>
             </div>
         </div>
     </section>
+
 
     <!-- Investment Section -->
     <section id="investment" class="investment">
