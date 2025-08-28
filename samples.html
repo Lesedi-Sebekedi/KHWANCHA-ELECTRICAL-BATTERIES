@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Batteries - Khwancha Batteries</title>
+    <meta name="description" content="Explore our battery prototypes and sample products developed for various applications">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Transition Overlay -->
+    <div class="transition-overlay">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__container">
+            <nav class="nav" aria-label="Main navigation">
+                <a href="index.html" class="logo">
+                    <img src="./images/logo.png" alt="Khwancha Batteries Logo" class="logo__image">
+                    KHWANCHA BATTERIES
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content with animation class -->
+    <main class="main-content">
+        <div class="container">
+            <a href="index.html" class="btn btn--back animate-on-scroll">
+                <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Home
+            </a>
+            
+            <div class="section__title animate-on-scroll">
+                <h1 class="section__heading">Sample Batteries</h1>
+                <p class="section__subheading">Explore our battery prototypes and sample products developed for various applications</p>
+            </div>
+            
+            <div class="gallery-grid" id="gallery">
+                <!-- Battery sample images with animation classes -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/battery1.jpg" alt="EV Battery Pack" class="gallery-item__image" loading="lazy">
+                    <div class="gallery-item__caption">Modular EV Battery Pack - 60kWh capacity</div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/battery2.jpg" alt="Battery Cells" class="gallery-item__image" loading="lazy">
+                    <div class="gallery-item__caption">Lithium-ion Battery Cells - High energy density</div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/battery3.jpg" alt="Battery Management System" class="gallery-item__image" loading="lazy">
+                    <div class="gallery-item__caption">Smart Battery Management System</div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/battery4.jpg" alt="Charging Station" class="gallery-item__image" loading="lazy">
+                    <div class="gallery-item__caption">Fast Charging Station Prototype</div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/battery5.jpg" alt="Conversion Kit" class="gallery-item__image" loading="lazy">
+                    <div class="gallery-item__caption">EV Conversion Kit for Commercial Vehicles</div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/battery6.jpg" alt="Testing Facility" class="gallery-item__image" loading="lazy">
+                    <div class="gallery-item__caption">Battery Testing and Quality Control Facility</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__btn lightbox__close" id="lightboxClose" aria-label="Close lightbox">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+        
+        <div class="lightbox__nav">
+            <button class="lightbox__btn" id="prevBtn" aria-label="Previous image">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            
+            <button class="lightbox__btn" id="nextBtn" aria-label="Next image">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+        
+        <div class="lightbox__content">
+            <img src="" alt="" class="lightbox__image" id="lightboxImg">
+            <p class="lightbox__caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <img src="./images/footer.png" alt="Khwancha Batteries Logo" class="footer__logo">
+            <p>Developing next-generation battery technology for Africa's sustainable transportation future.</p>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Khwancha Electrical Batteries Co. (Pty) Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

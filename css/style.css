@@ -1,0 +1,17 @@
+/* css/style.css */
+@import url('base.css');
+@import url('transitions.css');
+@import url('utils/variables.css');
+@import url('utils/animations.css');
+@import url('utils/notification.css');
+
+/* Import components */
+@import url('components/header.css');
+@import url('components/buttons.css');
+@import url('components/cards.css');
+@import url('components/forms.css');
+@import url('components/gallery.css');
+@import url('components/footer.css');
+
+/* Import layout */
+@import url('layout/sections.css');

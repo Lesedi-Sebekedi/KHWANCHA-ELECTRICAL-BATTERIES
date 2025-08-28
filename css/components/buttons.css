@@ -1,0 +1,80 @@
+@import url('../utils/variables.css');
+
+/* Button base */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-sm) var(--spacing-xl);
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+    border: 2px solid transparent;
+    cursor: pointer;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-md);
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background-color: var(--accent-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn--secondary {
+    background-color: transparent;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus-visible {
+    background-color: var(--accent);
+    color: white;
+}
+
+.btn--back {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: var(--spacing-lg);
+    padding: 0;
+    background: none;
+    border: none;
+    justify-content: flex-start;
+}
+
+.btn--back:hover,
+.btn--back:focus-visible {
+    transform: translateX(-5px);
+    background: none;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+/* Lightbox buttons */
+.lightbox__btn {
+    color: white;
+    font-size: var(--font-size-3xl);
+    cursor: pointer;
+    background: none;
+    border: none;
+    opacity: 0.7;
+    transition: opacity var(--transition-normal);
+    padding: var(--spacing-sm);
+}
+
+.lightbox__btn:hover,
+.lightbox__btn:focus-visible {
+    opacity: 1;
+}
+
+.lightbox__close {
+    position: absolute;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+}

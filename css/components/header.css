@@ -1,0 +1,119 @@
+@import url('../utils/variables.css');
+
+/* Header */
+.header {
+    background-color: white;
+    box-shadow: var(--shadow-sm);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: var(--z-fixed);
+    transition: all var(--transition-normal);
+}
+
+.header--scrolled {
+    padding: var(--spacing-xs) 0;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+    transition: padding var(--transition-normal);
+}
+
+.header--scrolled .header__container {
+    padding: var(--spacing-sm) 0;
+}
+
+/* Logo */
+.logo {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.logo__image {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-xl);
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: color var(--transition-normal);
+    position: relative;
+}
+
+.nav__link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary);
+    transition: width var(--transition-normal);
+}
+
+.nav__link:hover::after,
+.nav__link:focus-visible::after {
+    width: 100%;
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+    color: var(--primary);
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: var(--font-size-2xl);
+    background: none;
+    border: none;
+    color: var(--dark);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav__list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: var(--spacing-md);
+        box-shadow: var(--shadow-md);
+        gap: var(--spacing-md);
+    }
+    
+    .nav__list--active {
+        display: flex;
+    }
+}
