@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Attendance | Khwancha Batteries</title>
+    <meta name="description" content="Khwancha Batteries conference attendance highlights with animated image gallery and lightbox.">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary:#bc4703; --secondary:#222222; --accent:#6f9700; --light:#f8f9fa; --dark:#161616; --gray:#6c757d; }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color:var(--dark); background:var(--light); line-height:1.6; }
+        .container { width:90%; max-width:1200px; margin:0 auto; padding:0 15px; }
+        header { background:#fff; position:sticky; top:0; z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,.08); }
+        nav { display:flex; justify-content:space-between; align-items:center; padding:16px 0; }
+        .logo { display:flex; align-items:center; gap:10px; color:var(--primary); text-decoration:none; font-weight:700; }
+        .logo-img { height:40px; width:auto; }
+        .nav-links { list-style:none; display:flex; gap:24px; }
+        .nav-links a { color:var(--dark); text-decoration:none; font-weight:500; position:relative; }
+        .nav-links a:after { content:''; position:absolute; left:0; bottom:-6px; height:2px; width:0; background:var(--primary); transition:width .3s; }
+        .nav-links a:hover:after { width:100%; }
+        .hamburger { display:none; font-size:22px; cursor:pointer; }
+        @media (max-width:768px){ .nav-links{ display:none; position:absolute; top:100%; left:0; width:100%; background:#fff; padding:16px; box-shadow:0 5px 10px rgba(0,0,0,.08);} .nav-links.active{display:flex; flex-direction:column; gap:12px;} .hamburger{display:block;} }
+        .hero { padding:120px 0 60px; background:linear-gradient(135deg, var(--primary), var(--secondary)); color:#fff; text-align:center; position:relative; overflow:hidden; }
+        .hero h1 { font-size:2.6rem; margin-bottom:10px; animation:fadeIn 1s ease; }
+        .hero p { opacity:.9; animation:fadeIn 1.2s ease; }
+        section { padding:64px 0; }
+        .section-title { text-align:center; margin-bottom:36px; }
+        .section-title h2 { font-size:2rem; color:var(--secondary); margin-bottom:8px; }
+        .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:16px; }
+        .gallery-card { position:relative; overflow:hidden; border-radius:10px; background:#111; }
+        .gallery-card img { width:100%; height:100%; object-fit:cover; display:block; transform:scale(1.02); transition:transform .4s ease; }
+        .gallery-card:hover img { transform:scale(1.06); }
+        .caption { position:absolute; left:0; right:0; bottom:0; padding:10px 14px; color:#fff; background:linear-gradient(180deg, transparent, rgba(0,0,0,.65)); font-weight:600; font-size:.95rem; }
+        .reveal { opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
+        .reveal.show { opacity:1; transform:translateY(0); }
+        .lightbox-overlay { position:fixed; inset:0; background:rgba(0,0,0,.85); display:none; align-items:center; justify-content:center; z-index:10001; }
+        .lightbox-overlay.show { display:flex; }
+        .lightbox-image { max-width:90vw; max-height:85vh; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,.5); }
+        @keyframes fadeIn { from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);} }
+        @media (prefers-reduced-motion: reduce){ *{animation-duration:.001ms !important; transition-duration:.001ms !important; scroll-behavior:auto !important;} }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a class="logo" href="index.html" aria-label="Khwancha Batteries home">
+                    <img class="logo-img" src="images/logo.png" alt="Khwancha Batteries Logo" decoding="async">
+                    KHWANCHA BATTERIES
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#market">Market</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="index.html#strategy">Strategy</a></li>
+                    <li><a href="conference.html">Conference</a></li>
+                    <li><a href="batteries.html">Batteries</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" role="button" aria-label="Toggle navigation" aria-expanded="false"><i class="fas fa-bars"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Conference Attendance</h1>
+            <p>Highlights from BRICS, SA Auto Week, ACMS, and more.</p>
+        </div>
+    </section>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>Image Gallery</h2>
+                    <p>Tap any photo to view in full size.</p>
+                </div>
+                <div class="gallery-grid">
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/BRICS.JPG" alt="BRICS Summit"><figcaption class="caption">BRICS Summit</figcaption></figure>
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/SA-autweek.JPG" alt="SA Auto Week"><figcaption class="caption">SA Auto Week</figcaption></figure>
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/acms.JPG" alt="ACMS Event"><figcaption class="caption">ACMS Event</figcaption></figure>
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/photo0.jpeg" alt="Conference session"><figcaption class="caption">Conference Session</figcaption></figure>
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/photo1.jpeg" alt="Networking"><figcaption class="caption">Networking</figcaption></figure>
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/photo2.jpeg" alt="Exhibition floor"><figcaption class="caption">Exhibition Floor</figcaption></figure>
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/photo3.jpeg" alt="Panel talk"><figcaption class="caption">Panel Talk</figcaption></figure>
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/photo4.jpeg" alt="Keynote"><figcaption class="caption">Keynote</figcaption></figure>
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/photo5.jpeg" alt="Workshop"><figcaption class="caption">Workshop</figcaption></figure>
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/photo7.jpeg" alt="Booth"><figcaption class="caption">Booth</figcaption></figure>
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/photo8.jpeg" alt="Showcase"><figcaption class="caption">Showcase</figcaption></figure>
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/photo9.jpeg" alt="Audience"><figcaption class="caption">Audience</figcaption></figure>
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/photo10.jpeg" alt="Demo"><figcaption class="caption">Demo</figcaption></figure>
+                    <figure class="gallery-card reveal"><img loading="lazy" decoding="async" src="images/photo11.jpeg" alt="Closing remarks"><figcaption class="caption">Closing Remarks</figcaption></figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="lightbox-overlay" id="lightbox" aria-modal="true" role="dialog" aria-label="Image viewer">
+        <img class="lightbox-image" id="lightboxImage" alt="Expanded gallery image">
+    </div>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('active');
+            const expanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', String(!expanded));
+        });
+        const revealObserver = new IntersectionObserver((entries)=>{
+            entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('show'); revealObserver.unobserve(entry.target);} });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+        (function initLightbox(){
+            const overlay=document.getElementById('lightbox');
+            const imgEl=document.getElementById('lightboxImage');
+            document.querySelectorAll('.gallery-card img').forEach(img=>{
+                img.addEventListener('click',()=>{ imgEl.src=img.src; overlay.classList.add('show'); document.body.style.overflow='hidden'; });
+            });
+            function close(){ overlay.classList.remove('show'); imgEl.src=''; document.body.style.overflow=''; }
+            overlay.addEventListener('click',(e)=>{ if(e.target===overlay) close(); });
+            document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') close(); });
+        })();
+    </script>
+</body>
+</html>
