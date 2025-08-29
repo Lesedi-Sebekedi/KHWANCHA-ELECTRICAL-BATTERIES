@@ -8,58 +8,319 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --primary:#bc4703; --secondary:#222222; --accent:#6f9700; --light:#f8f9fa; --dark:#161616; --gray:#6c757d; }
-        * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { color:var(--dark); background:var(--light); line-height:1.6; }
-        .container { width:90%; max-width:1200px; margin:0 auto; padding:0 15px; }
-        header { background:#fff; position:sticky; top:0; z-index:1000; box-shadow:0 2px 10px rgba(0,0,0,.08); }
-        nav { display:flex; justify-content:space-between; align-items:center; padding:16px 0; }
-        .logo { display:flex; align-items:center; gap:10px; color:var(--primary); text-decoration:none; font-weight:700; }
-        .logo-img { height:40px; width:auto; }
-        .nav-links { list-style:none; display:flex; gap:24px; }
-        .nav-links a { color:var(--dark); text-decoration:none; font-weight:500; position:relative; }
-        .nav-links a:after { content:''; position:absolute; left:0; bottom:-6px; height:2px; width:0; background:var(--primary); transition:width .3s; }
-        .nav-links a:hover:after { width:100%; }
-        .hamburger { display:none; font-size:22px; cursor:pointer; }
-        @media (max-width:768px){ .nav-links{ display:none; position:absolute; top:100%; left:0; width:100%; background:#fff; padding:16px; box-shadow:0 5px 10px rgba(0,0,0,.08);} .nav-links.active{display:flex; flex-direction:column; gap:12px;} .hamburger{display:block;} }
-        .hero { padding:120px 0 60px; background:linear-gradient(135deg, var(--secondary), var(--primary)); color:#fff; text-align:center; position:relative; overflow:hidden; }
-        .hero h1 { font-size:2.6rem; margin-bottom:10px; animation:fadeIn 1s ease; }
-        .hero p { opacity:.9; animation:fadeIn 1.2s ease; }
-        section { padding:64px 0; }
-        .section-title { text-align:center; margin-bottom:36px; }
-        .section-title h2 { font-size:2rem; color:var(--secondary); margin-bottom:8px; }
-        .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:16px; }
-        .card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,.06); transition:transform .25s ease, box-shadow .25s ease; }
-        .card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(0,0,0,.08); }
+        :root { 
+            --primary:#bc4703; 
+            --secondary:#222222; 
+            --accent:#6f9700; 
+            --light:#f8f9fa; 
+            --dark:#161616; 
+            --gray:#6c757d; 
+        }
         
-        /* Updated image styling to preserve original proportions */
+        * { 
+            margin:0; 
+            padding:0; 
+            box-sizing:border-box; 
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        
+        body { 
+            color:var(--dark); 
+            background:var(--light); 
+            line-height:1.6; 
+        }
+        
+        .container { 
+            width:90%; 
+            max-width:1200px; 
+            margin:0 auto; 
+            padding:0 15px; 
+        }
+        
+        header { 
+            background:#fff; 
+            position:sticky; 
+            top:0; 
+            z-index:1000; 
+            box-shadow:0 2px 10px rgba(0,0,0,.08); 
+        }
+        
+        nav { 
+            display:flex; 
+            justify-content:space-between; 
+            align-items:center; 
+            padding:16px 0; 
+        }
+        
+        .logo { 
+            display:flex; 
+            align-items:center; 
+            gap:10px; 
+            color:var(--primary); 
+            text-decoration:none; 
+            font-weight:700; 
+        }
+        
+        .logo-img { 
+            height:40px; 
+            width:auto; 
+        }
+        
+        .nav-links { 
+            list-style:none; 
+            display:flex; 
+            gap:24px; 
+        }
+        
+        .nav-links a { 
+            color:var(--dark); 
+            text-decoration:none; 
+            font-weight:500; 
+            position:relative; 
+        }
+        
+        .nav-links a:after { 
+            content:''; 
+            position:absolute; 
+            left:0; 
+            bottom:-6px; 
+            height:2px; 
+            width:0; 
+            background:var(--primary); 
+            transition:width .3s; 
+        }
+        
+        .nav-links a:hover:after { 
+            width:100%; 
+        }
+        
+        .hamburger { 
+            display:none; 
+            font-size:22px; 
+            cursor:pointer; 
+        }
+        
+        @media (max-width:768px){ 
+            .nav-links{ 
+                display:none; 
+                position:absolute; 
+                top:100%; 
+                left:0; 
+                width:100%; 
+                background:#fff; 
+                padding:16px; 
+                box-shadow:0 5px 10px rgba(0,0,0,.08);
+            } 
+            
+            .nav-links.active{
+                display:flex; 
+                flex-direction:column; 
+                gap:12px;
+            } 
+            
+            .hamburger{
+                display:block;
+            } 
+        }
+        
+        .hero { 
+            padding:120px 0 60px; 
+            background:linear-gradient(135deg, var(--secondary), var(--primary)); 
+            color:#fff; 
+            text-align:center; 
+            position:relative; 
+            overflow:hidden; 
+        }
+        
+        .hero h1 { 
+            font-size:2.6rem; 
+            margin-bottom:10px; 
+            animation:fadeIn 1s ease; 
+        }
+        
+        .hero p { 
+            opacity:.9; 
+            animation:fadeIn 1.2s ease; 
+        }
+        
+        section { 
+            padding:64px 0; 
+        }
+        
+        .section-title { 
+            text-align:center; 
+            margin-bottom:36px; 
+        }
+        
+        .section-title h2 { 
+            font-size:2rem; 
+            color:var(--secondary); 
+            margin-bottom:8px; 
+        }
+        
+        .gallery-grid { 
+            display:grid; 
+            grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); 
+            gap:24px; 
+        }
+        
+        .card { 
+            background:#fff; 
+            border-radius:12px; 
+            overflow:hidden; 
+            box-shadow:0 8px 24px rgba(0,0,0,.06); 
+            transition:transform .4s ease, box-shadow .4s ease; 
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .card:hover { 
+            transform:translateY(-8px); 
+            box-shadow:0 16px 40px rgba(0,0,0,.12); 
+        }
+        
+        /* Image container with hover effect */
         .card-img-container {
             width: 100%;
             height: 0;
-            padding-top: 75%; /* 4:3 aspect ratio as default */
+            padding-top: 75%; /* 4:3 aspect ratio */
             position: relative;
             overflow: hidden;
         }
+        
         .card img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Changed from 'cover' to 'contain' to show full image */
-            background-color: #f5f5f5; /* Added background for images with transparency */
+            object-fit: cover;
+            transition: transform 0.5s ease;
         }
         
-        .card-body { padding:16px; }
-        .card-title { font-weight:700; color:var(--secondary); margin-bottom:6px; }
-        .card-text { color:var(--gray); font-size:.95rem; }
-        .reveal { opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
-        .reveal.show { opacity:1; transform:translateY(0); }
-        .lightbox-overlay { position:fixed; inset:0; background:rgba(0,0,0,.85); display:none; align-items:center; justify-content:center; z-index:10001; }
-        .lightbox-overlay.show { display:flex; }
-        .lightbox-image { max-width:90vw; max-height:85vh; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,.5); object-fit: contain; }
-        @keyframes fadeIn { from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);} }
-        @media (prefers-reduced-motion: reduce){ *{animation-duration:.001ms !important; transition-duration:.001ms !important; scroll-behavior:auto !important;} }
+        .card:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Overlay effect */
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: white;
+        }
+        
+        .card:hover .card-overlay {
+            opacity: 1;
+        }
+        
+        /* Info that appears on hover */
+        .card-info {
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+            opacity: 0;
+        }
+        
+        .card:hover .card-info {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .card-title {
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+        
+        .card-desc {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            margin-bottom: 12px;
+        }
+        
+        .card-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 8px 16px;
+            background-color: var(--primary);
+            border-radius: 4px;
+            text-decoration: none;
+            width: fit-content;
+        }
+        
+        .card-body { 
+            padding:16px; 
+        }
+        
+        .card-text { 
+            color:var(--gray); 
+            font-size:.95rem; 
+        }
+        
+        .reveal { 
+            opacity:0; 
+            transform:translateY(16px); 
+            transition:opacity .6s ease, transform .6s ease; 
+        }
+        
+        .reveal.show { 
+            opacity:1; 
+            transform:translateY(0); 
+        }
+        
+        .lightbox-overlay { 
+            position:fixed; 
+            inset:0; 
+            background:rgba(0,0,0,.85); 
+            display:none; 
+            align-items:center; 
+            justify-content:center; 
+            z-index:10001; 
+        }
+        
+        .lightbox-overlay.show { 
+            display:flex; 
+        }
+        
+        .lightbox-image { 
+            max-width:90vw; 
+            max-height:85vh; 
+            border-radius:8px; 
+            box-shadow:0 10px 30px rgba(0,0,0,.5); 
+        }
+        
+        @keyframes fadeIn { 
+            from{
+                opacity:0; 
+                transform:translateY(20px);
+            } 
+            to{
+                opacity:1; 
+                transform:translateY(0);
+            } 
+        }
+        
+        @media (prefers-reduced-motion: reduce){ 
+            *{
+                animation-duration:.001ms !important; 
+                transition-duration:.001ms !important; 
+                scroll-behavior:auto !important;
+            } 
+        }
     </style>
 </head>
 <body>
@@ -99,27 +360,74 @@
                 <div class="gallery-grid">
                     <article class="card reveal">
                         <div class="card-img-container">
+                            <img loading="lazy" decoding="async" src="images/sample.png" alt="Battery production render">
+                            <div class="card-overlay">
+                                <div class="card-info">
+                                    <h3 class="card-title"></h3>
+                                    <p class="card-desc"></p>
+                                    <span class="card-action"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-img-container">
                             <img loading="lazy" decoding="async" src="images/bat1.jpeg" alt="Battery module sample">
+                            <div class="card-overlay">
+                                <div class="card-info">
+                                    <h3 class="card-title"></h3>
+                                    <p class="card-desc"></p>
+                                    <span class="card-action"></span>
+                                </div>
+                            </div>
                         </div>
                     </article>
                     <article class="card reveal">
                         <div class="card-img-container">
                             <img loading="lazy" decoding="async" src="images/bat2.jpeg" alt="Bus registration component">
+                            <div class="card-overlay">
+                                <div class="card-info">
+                                    <h3 class="card-title"></h3>
+                                    <p class="card-desc"></p>
+                                    <span class="card-action"></span>
+                                </div>
+                            </div>
                         </div>
                     </article>
                     <article class="card reveal">
                         <div class="card-img-container">
                             <img loading="lazy" decoding="async" src="images/bat3.jpeg" alt="Bus registration component">
+                            <div class="card-overlay">
+                                <div class="card-info">
+                                    <h3 class="card-title"></h3>
+                                    <p class="card-desc"></p>
+                                    <span class="card-action"></span>
+                                </div>
+                            </div>
                         </div>
                     </article>
                     <article class="card reveal">
                         <div class="card-img-container">
                             <img loading="lazy" decoding="async" src="images/bat4.jpeg" alt="Bus registration component">
+                            <div class="card-overlay">
+                                <div class="card-info">
+                                    <h3 class="card-title"></h3>
+                                    <p class="card-desc"></p>
+                                    <span class="card-action"></span>
+                                </div>
+                            </div>
                         </div>
                     </article>
                     <article class="card reveal">
                         <div class="card-img-container">
                             <img loading="lazy" decoding="async" src="images/bat5.jpeg" alt="Bus registration component">
+                            <div class="card-overlay">
+                                <div class="card-info">
+                                    <h3 class="card-title"></h3>
+                                    <p class="card-desc"></p>
+                                    <span class="card-action"></span>
+                                </div>
+                            </div>
                         </div>
                     </article>
                 </div>
