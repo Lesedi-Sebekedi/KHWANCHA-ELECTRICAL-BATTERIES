@@ -31,7 +31,25 @@
         .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:16px; }
         .card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,.06); transition:transform .25s ease, box-shadow .25s ease; }
         .card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(0,0,0,.08); }
-        .card img { width:100%; height:220px; object-fit:cover; display:block; }
+        
+        /* Updated image styling to preserve original proportions */
+        .card-img-container {
+            width: 100%;
+            height: 0;
+            padding-top: 75%; /* 4:3 aspect ratio as default */
+            position: relative;
+            overflow: hidden;
+        }
+        .card img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Changed from 'cover' to 'contain' to show full image */
+            background-color: #f5f5f5; /* Added background for images with transparency */
+        }
+        
         .card-body { padding:16px; }
         .card-title { font-weight:700; color:var(--secondary); margin-bottom:6px; }
         .card-text { color:var(--gray); font-size:.95rem; }
@@ -39,7 +57,7 @@
         .reveal.show { opacity:1; transform:translateY(0); }
         .lightbox-overlay { position:fixed; inset:0; background:rgba(0,0,0,.85); display:none; align-items:center; justify-content:center; z-index:10001; }
         .lightbox-overlay.show { display:flex; }
-        .lightbox-image { max-width:90vw; max-height:85vh; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,.5); }
+        .lightbox-image { max-width:90vw; max-height:85vh; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,.5); object-fit: contain; }
         @keyframes fadeIn { from{opacity:0; transform:translateY(20px);} to{opacity:1; transform:translateY(0);} }
         @media (prefers-reduced-motion: reduce){ *{animation-duration:.001ms !important; transition-duration:.001ms !important; scroll-behavior:auto !important;} }
     </style>
@@ -80,24 +98,33 @@
                 </div>
                 <div class="gallery-grid">
                     <article class="card reveal">
-                        <img loading="lazy" decoding="async" src="images/batteryprod.png" alt="Battery production render">
-                        <div class="card-body">
-                            <div class="card-title">Production Concept</div>
-                            <div class="card-text">Battery production layout render.</div>
+                        <div class="card-img-container">
+                            <img loading="lazy" decoding="async" src="images/sample.png" alt="Battery production render">
                         </div>
                     </article>
                     <article class="card reveal">
-                        <img loading="lazy" decoding="async" src="images/sample.png" alt="Battery module sample">
-                        <div class="card-body">
-                            <div class="card-title">Module Sample</div>
-                            <div class="card-text">Early module sample for testing and validation.</div>
+                        <div class="card-img-container">
+                            <img loading="lazy" decoding="async" src="images/bat1.jpeg" alt="Battery module sample">
                         </div>
                     </article>
                     <article class="card reveal">
-                        <img loading="lazy" decoding="async" src="images/busreg.png" alt="Bus registration component">
-                        <div class="card-body">
-                            <div class="card-title">Registration Components</div>
-                            <div class="card-text">Components used in bus registration demonstration.</div>
+                        <div class="card-img-container">
+                            <img loading="lazy" decoding="async" src="images/bat2.jpeg" alt="Bus registration component">
+                        </div>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-img-container">
+                            <img loading="lazy" decoding="async" src="images/bat3.jpeg" alt="Bus registration component">
+                        </div>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-img-container">
+                            <img loading="lazy" decoding="async" src="images/bat4.jpeg" alt="Bus registration component">
+                        </div>
+                    </article>
+                    <article class="card reveal">
+                        <div class="card-img-container">
+                            <img loading="lazy" decoding="async" src="images/bat5.jpeg" alt="Bus registration component">
                         </div>
                     </article>
                 </div>
@@ -130,7 +157,29 @@
             overlay.addEventListener('click',(e)=>{ if(e.target===overlay) close(); });
             document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') close(); });
         })();
+        
+        // Additional script to handle different image aspect ratios
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adjust padding for each image container based on actual image aspect ratio
+            document.querySelectorAll('.card img').forEach(img => {
+                // Wait for images to load to get their natural dimensions
+                if (img.complete) {
+                    adjustImageContainer(img);
+                } else {
+                    img.addEventListener('load', function() {
+                        adjustImageContainer(img);
+                    });
+                }
+            });
+            
+            function adjustImageContainer(img) {
+                const container = img.parentElement;
+                if (img.naturalWidth && img.naturalHeight) {
+                    const aspectRatio = (img.naturalHeight / img.naturalWidth) * 100;
+                    container.style.paddingTop = `${aspectRatio}%`;
+                }
+            }
+        });
     </script>
 </body>
 </html>
-

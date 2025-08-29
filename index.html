@@ -413,16 +413,9 @@
             margin-right: 10px;
         }
         
-        /* Gallery Section */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
+        /* Gallery item styling with img tags */
         .gallery-item {
             height: 250px;
-            background-color: var(--secondary);
             border-radius: 10px;
             overflow: hidden;
             position: relative;
@@ -434,18 +427,41 @@
             font-weight: 600;
             cursor: pointer;
             transition: transform 0.3s;
+            text-decoration: none;
         }
-        
+
         .gallery-item:hover {
             transform: scale(1.03);
+            color: white;
+            text-decoration: none;
         }
-        
-        .gallery-item:nth-child(2n) {
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .gallery-caption {
+            background-color: rgba(0,0,0,0.6);
+            padding: 10px 20px;
+            border-radius: 5px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:nth-child(1) {
+            background-color: var(--secondary);
+        }
+
+        .gallery-item:nth-child(2) {
             background-color: var(--primary);
-        }
-        
-        .gallery-item:nth-child(3n) {
-            background-color: var(--accent);
         }
         
         /* Investment Section */
