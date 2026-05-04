@@ -1,4 +1,4 @@
-import { addDelegateEvent, smoothScrollTo } from '../utils/helpers.js';
+import { addDelegateEvent, smoothScrollTo, debounce } from '../utils/helpers.js';
 
 /**
  * Initialize navigation functionality

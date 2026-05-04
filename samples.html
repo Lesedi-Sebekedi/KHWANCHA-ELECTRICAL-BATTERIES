@@ -20,13 +20,27 @@
     </div>
 
     <!-- Header -->
-    <header class="header">
+    <header id="header" class="header">
         <div class="container header__container">
             <nav class="nav" aria-label="Main navigation">
                 <a href="index.html" class="logo">
                     <img src="./images/logo.png" alt="Khwancha Batteries Logo" class="logo__image">
                     KHWANCHA BATTERIES
                 </a>
+                <button class="menu-toggle" aria-expanded="false" aria-controls="nav-list">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                    <span class="sr-only">Toggle menu</span>
+                </button>
+                <ul class="nav__list" id="nav-list">
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="index.html#market" class="nav__link">Market</a></li>
+                    <li class="nav__item"><a href="index.html#products" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="index.html#strategy" class="nav__link">Strategy</a></li>
+                    <li class="nav__item"><a href="conferences.html" class="nav__link">Conferences</a></li>
+                    <li class="nav__item"><a href="samples.html" class="nav__link">Samples</a></li>
+                    <li class="nav__item"><a href="index.html#investment" class="nav__link">Investment</a></li>
+                    <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -46,33 +60,28 @@
             <div class="gallery-grid" id="gallery">
                 <!-- Battery sample images with animation classes -->
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/battery1.jpg" alt="EV Battery Pack" class="gallery-item__image" loading="lazy">
-                    <div class="gallery-item__caption">Modular EV Battery Pack - 60kWh capacity</div>
+                    <img src="images/sample.png" alt="Sample Battery Prototype" class="gallery-item__image" loading="lazy">
+                    <div class="gallery-item__caption">Sample Battery Prototype</div>
                 </div>
                 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/battery2.jpg" alt="Battery Cells" class="gallery-item__image" loading="lazy">
-                    <div class="gallery-item__caption">Lithium-ion Battery Cells - High energy density</div>
+                    <img src="images/batery1.jpeg" alt="Battery Sample 1" class="gallery-item__image" loading="lazy">
+                    <div class="gallery-item__caption">Battery Sample 1</div>
                 </div>
                 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/battery3.jpg" alt="Battery Management System" class="gallery-item__image" loading="lazy">
-                    <div class="gallery-item__caption">Smart Battery Management System</div>
+                    <img src="images/batery2.jpeg" alt="Battery Sample 2" class="gallery-item__image" loading="lazy">
+                    <div class="gallery-item__caption">Battery Sample 2</div>
                 </div>
                 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/battery4.jpg" alt="Charging Station" class="gallery-item__image" loading="lazy">
-                    <div class="gallery-item__caption">Fast Charging Station Prototype</div>
+                    <img src="images/batery3.jpeg" alt="Battery Sample 3" class="gallery-item__image" loading="lazy">
+                    <div class="gallery-item__caption">Battery Sample 3</div>
                 </div>
                 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/battery5.jpg" alt="Conversion Kit" class="gallery-item__image" loading="lazy">
-                    <div class="gallery-item__caption">EV Conversion Kit for Commercial Vehicles</div>
-                </div>
-                
-                <div class="gallery-item animate-on-scroll">
-                    <img src="images/battery6.jpg" alt="Testing Facility" class="gallery-item__image" loading="lazy">
-                    <div class="gallery-item__caption">Battery Testing and Quality Control Facility</div>
+                    <img src="images/batery4.jpeg" alt="Battery Sample 4" class="gallery-item__image" loading="lazy">
+                    <div class="gallery-item__caption">Battery Sample 4</div>
                 </div>
             </div>
         </div>
@@ -107,7 +116,7 @@
             <p>Developing next-generation battery technology for Africa's sustainable transportation future.</p>
             
             <div class="copyright">
-                <p>&copy; 2025 Khwancha Electrical Batteries Co. (Pty) Ltd. All rights reserved.</p>
+                <p>&copy; <span data-current-year>2025</span> Khwancha Electrical Batteries Co. (Pty) Ltd. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -20,13 +20,27 @@
     </div>
 
     <!-- Header -->
-    <header class="header">
+    <header id="header" class="header">
         <div class="container header__container">
             <nav class="nav" aria-label="Main navigation">
                 <a href="index.html" class="logo">
                     <img src="./images/logo.png" alt="Khwancha Batteries Logo" class="logo__image">
                     KHWANCHA BATTERIES
                 </a>
+                <button class="menu-toggle" aria-expanded="false" aria-controls="nav-list">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                    <span class="sr-only">Toggle menu</span>
+                </button>
+                <ul class="nav__list" id="nav-list">
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="index.html#market" class="nav__link">Market</a></li>
+                    <li class="nav__item"><a href="index.html#products" class="nav__link">Products</a></li>
+                    <li class="nav__item"><a href="index.html#strategy" class="nav__link">Strategy</a></li>
+                    <li class="nav__item"><a href="conferences.html" class="nav__link">Conferences</a></li>
+                    <li class="nav__item"><a href="samples.html" class="nav__link">Samples</a></li>
+                    <li class="nav__item"><a href="index.html#investment" class="nav__link">Investment</a></li>
+                    <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -46,32 +60,32 @@
             <div class="gallery-grid" id="gallery">
                 <!-- Conference images with animation classes -->
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/conference1.jpg" alt="Energy Conference 2023" class="gallery-item__image" loading="lazy">
+                    <img src="images/photo1.jpeg" alt="Energy Conference 2023" class="gallery-item__image" loading="lazy">
                     <div class="gallery-item__caption">Africa Energy Conference 2023 - Johannesburg</div>
                 </div>
                 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/conference2.jpg" alt="EV Summit" class="gallery-item__image" loading="lazy">
+                    <img src="images/photo2.jpeg" alt="EV Summit" class="gallery-item__image" loading="lazy">
                     <div class="gallery-item__caption">Electric Vehicle Summit - Cape Town</div>
                 </div>
                 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/conference3.jpg" alt="Tech Expo" class="gallery-item__image" loading="lazy">
+                    <img src="images/photo3.jpeg" alt="Tech Expo" class="gallery-item__image" loading="lazy">
                     <div class="gallery-item__caption">Clean Technology Expo - Durban</div>
                 </div>
                 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/conference4.jpg" alt="Innovation Forum" class="gallery-item__image" loading="lazy">
+                    <img src="images/photo4.jpeg" alt="Innovation Forum" class="gallery-item__image" loading="lazy">
                     <div class="gallery-item__caption">Battery Innovation Forum - Pretoria</div>
                 </div>
                 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/conference5.jpg" alt="Industry Meet" class="gallery-item__image" loading="lazy">
+                    <img src="images/photo5.jpeg" alt="Industry Meet" class="gallery-item__image" loading="lazy">
                     <div class="gallery-item__caption">Industry Stakeholders Meeting - Mahikeng</div>
                 </div>
                 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/conference6.jpg" alt="Partner Conference" class="gallery-item__image" loading="lazy">
+                    <img src="images/photo7.jpeg" alt="Partner Conference" class="gallery-item__image" loading="lazy">
                     <div class="gallery-item__caption">Partner Conference with Leema Industries - Midrand</div>
                 </div>
             </div>
@@ -107,7 +121,7 @@
             <p>Developing next-generation battery technology for Africa's sustainable transportation future.</p>
             
             <div class="copyright">
-                <p>&copy; 2025 Khwancha Electrical Batteries Co. (Pty) Ltd. All rights reserved.</p>
+                <p>&copy; <span data-current-year>2025</span> Khwancha Electrical Batteries Co. (Pty) Ltd. All rights reserved.</p>
             </div>
         </div>
     </footer>

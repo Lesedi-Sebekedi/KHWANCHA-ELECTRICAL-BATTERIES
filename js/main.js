@@ -12,6 +12,9 @@ import { showNotification } from './utils/notifications.js';
  * Initialize page-specific functionality
  */
 function initPage() {
+    // Keep footer year current automatically
+    updateCurrentYear();
+
     // Initialize navigation
     initNavigation();
     
@@ -30,6 +33,16 @@ function initPage() {
     
     // Initialize scroll animations
     initScrollAnimations();
+}
+
+/**
+ * Set all current-year placeholders in the page.
+ */
+function updateCurrentYear() {
+    const currentYear = new Date().getFullYear();
+    document.querySelectorAll('[data-current-year]').forEach((el) => {
+        el.textContent = currentYear;
+    });
 }
 
 /**

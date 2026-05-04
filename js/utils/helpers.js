@@ -42,9 +42,9 @@ export function isInViewport(element) {
  */
 export function addDelegateEvent(event, selector, callback, context = document) {
     context.addEventListener(event, function(e) {
-        if (e.target.matches(selector)) {
-            callback(e);
-        }
+        const matchedElement = e.target.closest(selector);
+        if (!matchedElement || !context.contains(matchedElement)) return;
+        callback.call(matchedElement, e);
     });
 }
 
