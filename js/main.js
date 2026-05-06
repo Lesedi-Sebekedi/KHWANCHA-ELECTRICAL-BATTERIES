@@ -21,8 +21,8 @@ function initPage() {
     // Initialize charts
     initCharts();
     
-    // Initialize lightbox if on gallery pages
-    if (document.querySelector('.gallery-item')) {
+    // Initialize lightbox only on pages that include the lightbox markup
+    if (document.getElementById('lightbox')) {
         initLightbox();
     }
     
