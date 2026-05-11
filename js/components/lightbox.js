@@ -9,11 +9,13 @@ export function initLightbox() {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
     
-    let galleryItems = [];
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'))
+        .filter(item => item.querySelector('.gallery-item__image') && item.querySelector('.gallery-item__caption'));
     let currentIndex = 0;
-    
-    // Get gallery items
-    galleryItems = document.querySelectorAll('.gallery-item');
+
+    if (!lightbox || !lightboxImg || !lightboxCaption || galleryItems.length === 0) {
+        return;
+    }
     
     // Add event listeners to gallery items
     galleryItems.forEach((item, index) => {
@@ -88,10 +90,10 @@ export function initLightbox() {
      * @param {KeyboardEvent} e - The keyboard event
      */
     function handleKeydown(e) {
-        if (lightbox.style.display === 'flex') {
-            if (e.key === 'Escape') closeLightbox();
-            if (e.key === 'ArrowRight') nextImage();
-            if (e.key === 'ArrowLeft') prevImage();
-        }
+        if (lightbox.style.display !== 'flex') return;
+
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
     }
 }
