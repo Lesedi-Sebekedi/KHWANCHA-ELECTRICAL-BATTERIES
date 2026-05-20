@@ -8,6 +8,8 @@ export function initLightbox() {
     const lightboxClose = document.getElementById('lightboxClose');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
+
+    if (!lightbox || !lightboxImg || !lightboxCaption) return;
     
     let galleryItems = [];
     let currentIndex = 0;
