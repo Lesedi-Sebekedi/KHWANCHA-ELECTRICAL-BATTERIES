@@ -11,7 +11,7 @@
     text-decoration: none;
     border-radius: 30px;
     font-weight: 600;
-    transition: all var(--transition-normal);
+    transition: background-color var(--transition-normal), color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
     border: 2px solid transparent;
     cursor: pointer;
     gap: var(--spacing-sm);
