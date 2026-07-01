@@ -25,6 +25,12 @@
     box-shadow: var(--shadow-md);
 }
 
+.btn:active,
+.btn--secondary:active {
+    transform: scale(0.97);
+    transition-duration: 0ms;
+}
+
 .btn--secondary {
     background-color: transparent;
     border-color: var(--accent);
