@@ -8,6 +8,18 @@
     margin-bottom: var(--spacing-2xl);
 }
 
+/* Homepage preview: few cards centered as a group instead of left-packed */
+.gallery-grid--preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-grid--preview .gallery-item {
+    flex: 1 1 320px;
+    max-width: 420px;
+}
+
 /* Gallery item */
 .gallery-item {
     border-radius: var(--border-radius);

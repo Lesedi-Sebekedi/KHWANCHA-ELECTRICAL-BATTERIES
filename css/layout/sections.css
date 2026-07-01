@@ -130,14 +130,55 @@
     transform: scale(1.05);
 }
 
-/* Credentials / trust signals */
-.credibility-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+/* Credentials / trust signals — auto-scrolling marquee */
+.credibility-carousel {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.credibility-track {
+    display: flex;
+    align-items: flex-start;
     gap: var(--spacing-xl);
+    width: max-content;
+    animation: credibility-scroll 40s linear infinite;
+}
+
+.credibility-carousel:hover .credibility-track,
+.credibility-carousel:focus-within .credibility-track {
+    animation-play-state: paused;
+}
+
+@keyframes credibility-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .credibility-track {
+        animation: none;
+        transform: none;
+        flex-wrap: wrap;
+        width: auto;
+    }
+
+    .credibility-card[aria-hidden="true"] {
+        display: none;
+    }
+
+    .credibility-carousel {
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
 }
 
 .credibility-card {
+    flex: 0 0 260px;
     background-color: white;
     border-radius: var(--border-radius);
     overflow: hidden;
