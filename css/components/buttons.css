@@ -37,6 +37,16 @@
     color: var(--accent);
 }
 
+.btn--whatsapp {
+    background-color: #25d366;
+    font-size: var(--font-size-lg);
+}
+
+.btn--whatsapp:hover,
+.btn--whatsapp:focus-visible {
+    background-color: #1da851;
+}
+
 .btn--secondary:hover,
 .btn--secondary:focus-visible {
     background-color: var(--accent);

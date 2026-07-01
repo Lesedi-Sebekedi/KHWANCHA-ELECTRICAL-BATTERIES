@@ -401,43 +401,14 @@
                 </div>
                 
                 <div class="content-flex__item animate-on-scroll">
-                    <div class="contact-form">
-                        <h3>Send Us a Message</h3>
-                        <!-- Replace YOUR_FORM_ID with your Formspree form ID from https://formspree.io -->
-                        <form id="contactForm" data-form-endpoint="https://formspree.io/f/YOUR_FORM_ID">
-                            <div class="form-group">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" id="name" name="name" class="form-control" required autocomplete="name">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" id="email" name="email" class="form-control" required autocomplete="email">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="company" class="form-label">Company</label>
-                                <input type="text" id="company" name="company" class="form-control" autocomplete="organization">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="interest" class="form-label">Interest</label>
-                                <select id="interest" name="interest" class="form-control form-select">
-                                    <option value="">Select an option</option>
-                                    <option value="investment">Investment Opportunity</option>
-                                    <option value="partnership">Business Partnership</option>
-                                    <option value="products">Product Information</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea id="message" name="message" class="form-control form-control--textarea" required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn">Send Message</button>
-                        </form>
+                    <div class="contact-form contact-whatsapp">
+                        <i class="fab fa-whatsapp contact-whatsapp__icon" aria-hidden="true"></i>
+                        <h3>Chat With Us</h3>
+                        <p>Message us directly on WhatsApp and we'll get back to you as soon as possible.</p>
+                        <a href="https://wa.me/27825907971" class="btn btn--whatsapp" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp at 082 590 7971">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Chat on WhatsApp
+                        </a>
+                        <p class="contact-whatsapp__number">082 590 7971</p>
                     </div>
                 </div>
             </div>

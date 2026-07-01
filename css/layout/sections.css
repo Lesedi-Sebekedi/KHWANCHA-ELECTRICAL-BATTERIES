@@ -293,6 +293,31 @@
     width: 20px;
 }
 
+/* WhatsApp contact CTA */
+.contact-whatsapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: var(--spacing-md);
+    height: 100%;
+    padding: var(--spacing-2xl);
+    background-color: var(--surface-alt);
+    border-radius: var(--border-radius);
+}
+
+.contact-whatsapp__icon {
+    font-size: 3.5rem;
+    color: #25d366;
+}
+
+.contact-whatsapp__number {
+    font-weight: 600;
+    color: var(--secondary);
+    letter-spacing: 0.03em;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .section {
