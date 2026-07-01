@@ -11,7 +11,7 @@
     text-decoration: none;
     border-radius: 30px;
     font-weight: 600;
-    transition: all var(--transition-normal);
+    transition: background-color var(--transition-normal), color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
     border: 2px solid transparent;
     cursor: pointer;
     gap: var(--spacing-sm);
@@ -25,10 +25,26 @@
     box-shadow: var(--shadow-md);
 }
 
+.btn:active,
+.btn--secondary:active {
+    transform: scale(0.97);
+    transition-duration: 0ms;
+}
+
 .btn--secondary {
     background-color: transparent;
     border-color: var(--accent);
     color: var(--accent);
+}
+
+.btn--whatsapp {
+    background-color: #25d366;
+    font-size: var(--font-size-lg);
+}
+
+.btn--whatsapp:hover,
+.btn--whatsapp:focus-visible {
+    background-color: #1da851;
 }
 
 .btn--secondary:hover,

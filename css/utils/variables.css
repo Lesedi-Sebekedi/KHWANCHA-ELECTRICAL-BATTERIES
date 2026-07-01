@@ -18,9 +18,14 @@
     --gray: #6c757d;
     --gray-light: #e9ecef;
     --gray-dark: #495057;
+    --surface-alt: #f3f0ec;
+    
+    /* Decorative wave overlay (accent #6f9700, URL-encoded) */
+    --wave-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%236f9700' fill-opacity='0.12' d='M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,218.7C672,224,768,160,864,138.7C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
     
     /* Typography */
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-family: 'DM Sans', system-ui, sans-serif;
+    --font-family-heading: 'Space Grotesk', system-ui, sans-serif;
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
     --font-size-md: 1rem;
@@ -29,6 +34,7 @@
     --font-size-2xl: 1.5rem;
     --font-size-3xl: 1.875rem;
     --font-size-4xl: 2.25rem;
+    --tracking-tight: -0.02em;
     
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -50,9 +56,9 @@
     --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
     
     /* Transitions */
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     
     /* Z-index */
     --z-dropdown: 1000;

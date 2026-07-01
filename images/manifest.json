@@ -1,0 +1,200 @@
+{
+  "BRICS.webp": {
+    "bytes": 28792,
+    "height": 717,
+    "original": "BRICS.webp",
+    "width": 535
+  },
+  "Brick-2023-3.jpg": {
+    "height": 1200,
+    "original": "Brick-2023-3.jpg",
+    "original_bytes": 175138,
+    "webp": "Brick-2023-3.webp",
+    "webp_bytes": 139246,
+    "width": 1600
+  },
+  "Brick-2023-4.webp": {
+    "bytes": 75834,
+    "height": 1600,
+    "original": "Brick-2023-4.webp",
+    "width": 1200
+  },
+  "Brick-2023-5.webp": {
+    "bytes": 86272,
+    "height": 1200,
+    "original": "Brick-2023-5.webp",
+    "width": 1200
+  },
+  "Bricks-2023-1.jpg": {
+    "height": 1200,
+    "original": "Bricks-2023-1.jpg",
+    "original_bytes": 431393,
+    "webp": "Bricks-2023-1.webp",
+    "webp_bytes": 153042,
+    "width": 1600
+  },
+  "Bricks-2023-2.webp": {
+    "bytes": 123898,
+    "height": 1200,
+    "original": "Bricks-2023-2.webp",
+    "width": 1600
+  },
+  "Bricks0.webp": {
+    "bytes": 149088,
+    "height": 1200,
+    "original": "Bricks0.webp",
+    "width": 1600
+  },
+  "Bricks1.webp": {
+    "bytes": 86272,
+    "height": 1200,
+    "original": "Bricks1.webp",
+    "width": 1200
+  },
+  "Bricks2.webp": {
+    "bytes": 60806,
+    "height": 1600,
+    "original": "Bricks2.webp",
+    "width": 1200
+  },
+  "Bricks3.webp": {
+    "bytes": 75834,
+    "height": 1600,
+    "original": "Bricks3.webp",
+    "width": 1200
+  },
+  "Bricks4.webp": {
+    "bytes": 139246,
+    "height": 1200,
+    "original": "Bricks4.webp",
+    "width": 1600
+  },
+  "Bricks5.webp": {
+    "bytes": 127792,
+    "height": 1600,
+    "original": "Bricks5.webp",
+    "width": 1200
+  },
+  "Bricks6.webp": {
+    "bytes": 118058,
+    "height": 1200,
+    "original": "Bricks6.webp",
+    "width": 1600
+  },
+  "PHOTO-2025-08-25-09-34-53.jpg": {
+    "height": 710,
+    "original": "PHOTO-2025-08-25-09-34-53.jpg",
+    "original_bytes": 99078,
+    "width": 1280
+  },
+  "SA-autweek.webp": {
+    "bytes": 31474,
+    "height": 726,
+    "original": "SA-autweek.webp",
+    "width": 540
+  },
+  "acms.webp": {
+    "bytes": 26392,
+    "height": 714,
+    "original": "acms.webp",
+    "width": 500
+  },
+  "batery1.webp": {
+    "bytes": 110788,
+    "height": 1280,
+    "original": "batery1.webp",
+    "width": 1280
+  },
+  "batery2.webp": {
+    "bytes": 65752,
+    "height": 1280,
+    "original": "batery2.webp",
+    "width": 1280
+  },
+  "batery3.webp": {
+    "bytes": 24212,
+    "height": 1320,
+    "original": "batery3.webp",
+    "width": 540
+  },
+  "batery4.webp": {
+    "bytes": 56532,
+    "height": 1280,
+    "original": "batery4.webp",
+    "width": 1280
+  },
+  "batteryprod.png": {
+    "bytes": 141810,
+    "height": 183,
+    "original": "batteryprod.png",
+    "width": 275
+  },
+  "busreg.png": {
+    "bytes": 125899,
+    "height": 524,
+    "original": "busreg.png",
+    "width": 525
+  },
+  "footer.png": {
+    "bytes": 16841,
+    "height": 125,
+    "original": "footer.png",
+    "width": 168
+  },
+  "logo.png": {
+    "bytes": 19424,
+    "height": 125,
+    "original": "logo.png",
+    "width": 168
+  },
+  "photo1.webp": {
+    "bytes": 132200,
+    "height": 1600,
+    "original": "photo1.webp",
+    "width": 1200
+  },
+  "photo14.webp": {
+    "bytes": 38554,
+    "height": 647,
+    "original": "photo14.webp",
+    "width": 540
+  },
+  "photo2.webp": {
+    "bytes": 135226,
+    "height": 1600,
+    "original": "photo2.webp",
+    "width": 1200
+  },
+  "photo3.webp": {
+    "bytes": 144688,
+    "height": 1600,
+    "original": "photo3.webp",
+    "width": 1200
+  },
+  "photo5.webp": {
+    "bytes": 145654,
+    "height": 1600,
+    "original": "photo5.webp",
+    "width": 1200
+  },
+  "sa-industrial-expo.webp": {
+    "bytes": 50706,
+    "height": 720,
+    "original": "sa-industrial-expo.webp",
+    "width": 540
+  },
+  "sample.png": {
+    "bytes": 271128,
+    "height": 808,
+    "original": "sample.png",
+    "width": 559
+  },
+  "ticad-business-expo.jpg": {
+    "height": 1280,
+    "original": "ticad-business-expo.jpg",
+    "original_bytes": 167183,
+    "webp": "ticad-business-expo.webp",
+    "webp_bytes": 88406,
+    "width": 960
+  }
+}

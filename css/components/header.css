@@ -8,7 +8,7 @@
     width: 100%;
     top: 0;
     z-index: var(--z-fixed);
-    transition: all var(--transition-normal);
+    transition: padding var(--transition-normal);
 }
 
 .header--scrolled {

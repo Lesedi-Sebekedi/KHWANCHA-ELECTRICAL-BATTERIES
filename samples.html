@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Batteries - Khwancha Batteries</title>
     <meta name="description" content="Explore our battery prototypes and sample products developed for various applications">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     
     <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
@@ -24,7 +29,7 @@
         <div class="container header__container">
             <nav class="nav" aria-label="Main navigation">
                 <a href="index.html" class="logo">
-                    <img src="./images/logo.png" alt="Khwancha Batteries Logo" class="logo__image">
+                    <img src="./images/logo.png" alt="Khwancha Batteries Logo" width="168" height="125" class="logo__image">
                     KHWANCHA BATTERIES
                 </a>
                 <button class="menu-toggle" aria-expanded="false" aria-controls="nav-list">
@@ -57,31 +62,26 @@
                 <p class="section__subheading">Explore our battery prototypes and sample products developed for various applications</p>
             </div>
             
-            <div class="gallery-grid" id="gallery">
+            <div class="gallery-grid gallery-grid--full" id="gallery">
                 <!-- Battery sample images with animation classes -->
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/sample.png" alt="Sample Battery Prototype" class="gallery-item__image" loading="lazy">
-                    <div class="gallery-item__caption">Sample Battery Prototype</div>
+                    <img src="images/sample.png" alt="Sample Battery Prototype" width="559" height="808" class="gallery-item__image" loading="lazy">
                 </div>
                 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/batery1.jpeg" alt="Battery Sample 1" class="gallery-item__image" loading="lazy">
-                    <div class="gallery-item__caption">Battery Sample 1</div>
+                    <img src="images/batery1.webp" alt="Battery Sample 1" width="1280" height="1280" class="gallery-item__image" loading="lazy">
                 </div>
                 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/batery2.jpeg" alt="Battery Sample 2" class="gallery-item__image" loading="lazy">
-                    <div class="gallery-item__caption">Battery Sample 2</div>
+                    <img src="images/batery2.webp" alt="Battery Sample 2" width="1280" height="1280" class="gallery-item__image" loading="lazy">
                 </div>
                 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/batery3.jpeg" alt="Battery Sample 3" class="gallery-item__image" loading="lazy">
-                    <div class="gallery-item__caption">Battery Sample 3</div>
+                    <img src="images/batery3.webp" alt="Battery Sample 3" width="540" height="1320" class="gallery-item__image" loading="lazy">
                 </div>
                 
                 <div class="gallery-item animate-on-scroll">
-                    <img src="images/batery4.jpeg" alt="Battery Sample 4" class="gallery-item__image" loading="lazy">
-                    <div class="gallery-item__caption">Battery Sample 4</div>
+                    <img src="images/batery4.webp" alt="Battery Sample 4" width="1280" height="1280" class="gallery-item__image" loading="lazy">
                 </div>
             </div>
         </div>
@@ -104,7 +104,7 @@
         </div>
         
         <div class="lightbox__content">
-            <img src="" alt="" class="lightbox__image" id="lightboxImg">
+            <img src="" alt="" width="1200" height="1600" class="lightbox__image" id="lightboxImg">
             <p class="lightbox__caption" id="lightboxCaption"></p>
         </div>
     </div>
@@ -112,7 +112,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <img src="./images/footer.png" alt="Khwancha Batteries Logo" class="footer__logo">
+            <img src="./images/footer.png" alt="Khwancha Batteries Logo" width="168" height="125" class="footer__logo">
             <p>Developing next-generation battery technology for Africa's sustainable transportation future.</p>
             
             <div class="copyright">
