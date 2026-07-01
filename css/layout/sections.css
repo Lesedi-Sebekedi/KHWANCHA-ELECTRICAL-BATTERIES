@@ -6,7 +6,7 @@
 }
 
 .section--alt {
-    background-color: #f1f5f9;
+    background-color: var(--surface-alt);
 }
 
 .section--dark {
@@ -23,7 +23,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2300cc99' fill-opacity='0.1' d='M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,218.7C672,224,768,160,864,138.7C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background: var(--wave-pattern);
     background-size: cover;
     background-position: center;
 }
@@ -67,7 +67,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2300cc99' fill-opacity='0.1' d='M0,128L48,117.3C96,107,192,85,288,112C384,139,480,213,576,218.7C672,224,768,160,864,138.7C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background: var(--wave-pattern);
     background-size: cover;
     background-position: center;
 }
@@ -128,6 +128,57 @@
 
 .about-image:hover img {
     transform: scale(1.05);
+}
+
+/* Credentials / trust signals */
+.credibility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.credibility-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-light);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.credibility-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.credibility-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.credibility-card--document .credibility-card__image {
+    object-fit: contain;
+    background-color: var(--surface-alt);
+    padding: var(--spacing-md);
+    height: 260px;
+}
+
+.credibility-card__caption {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-sm);
+    color: var(--secondary);
+    font-weight: 600;
+    border-top: 3px solid var(--primary);
+}
+
+.credibility-card__caption span {
+    display: block;
+    margin-top: var(--spacing-xs);
+    font-weight: 400;
+    color: var(--gray);
+    font-size: var(--font-size-xs);
 }
 
 /* Market section */
