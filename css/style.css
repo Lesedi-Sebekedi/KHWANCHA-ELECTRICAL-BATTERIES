@@ -1,6 +1,5 @@
 /* css/style.css */
 @import url('base.css');
-@import url('transitions.css');
 @import url('utils/variables.css');
 @import url('utils/animations.css');
 @import url('utils/notification.css');

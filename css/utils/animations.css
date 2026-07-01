@@ -122,6 +122,15 @@
     transform: translateY(0);
 }
 
+/* Safety net: never keep content hidden when motion is reduced or JS is unavailable */
+@media (prefers-reduced-motion: reduce) {
+    .animate-on-scroll {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 /* Gallery item stagger */
 .gallery-item {
     opacity: 0;
