@@ -5,6 +5,11 @@
     padding: var(--spacing-3xl) 0;
 }
 
+/* Clear the fixed header on interior pages that start with content */
+.main-content {
+    padding-top: 100px;
+}
+
 .section--alt {
     background-color: var(--surface-alt);
 }
