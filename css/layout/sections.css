@@ -151,6 +151,11 @@
     box-shadow: var(--shadow-lg);
 }
 
+.credibility-card picture {
+    display: block;
+    width: 100%;
+}
+
 .credibility-card__image {
     width: 100%;
     height: 200px;

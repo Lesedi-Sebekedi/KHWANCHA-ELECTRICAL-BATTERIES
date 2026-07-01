@@ -18,3 +18,7 @@
 .notification--show {
     transform: translateX(0);
 }
+
+.notification--error {
+    background-color: var(--primary-dark);
+}

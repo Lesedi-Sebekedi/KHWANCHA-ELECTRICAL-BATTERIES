@@ -54,8 +54,10 @@ export function initLightbox() {
 
         if (!img || !caption) return;
         
-        lightboxImg.src = img.src;
+        lightboxImg.src = img.currentSrc || img.src;
         lightboxImg.alt = img.alt;
+        lightboxImg.width = img.width;
+        lightboxImg.height = img.height;
         lightboxCaption.textContent = caption.textContent;
     }
     

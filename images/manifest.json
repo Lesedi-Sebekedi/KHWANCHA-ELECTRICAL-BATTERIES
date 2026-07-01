@@ -1,0 +1,232 @@
+{
+  "acms.JPG": {
+    "original": "acms.JPG",
+    "webp": "acms.webp",
+    "width": 500,
+    "height": 714,
+    "webp_bytes": 26392,
+    "original_bytes": 68936,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "batery1.jpeg": {
+    "original": "batery1.jpeg",
+    "webp": "batery1.webp",
+    "width": 1280,
+    "height": 1280,
+    "webp_bytes": 110788,
+    "original_bytes": 440848,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "batery2.jpeg": {
+    "original": "batery2.jpeg",
+    "webp": "batery2.webp",
+    "width": 1280,
+    "height": 1280,
+    "webp_bytes": 65752,
+    "original_bytes": 320747,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "batery3.jpeg": {
+    "original": "batery3.jpeg",
+    "webp": "batery3.webp",
+    "width": 540,
+    "height": 1320,
+    "webp_bytes": 24212,
+    "original_bytes": 40462,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "batery4.jpeg": {
+    "original": "batery4.jpeg",
+    "webp": "batery4.webp",
+    "width": 1280,
+    "height": 1280,
+    "webp_bytes": 56532,
+    "original_bytes": 284690,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "BRICS.JPG": {
+    "original": "BRICS.JPG",
+    "webp": "BRICS.webp",
+    "width": 535,
+    "height": 717,
+    "webp_bytes": 28792,
+    "original_bytes": 67976,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "photo0.jpeg": {
+    "original": "photo0.jpeg",
+    "webp": "photo0.webp",
+    "width": 1600,
+    "height": 1200,
+    "webp_bytes": 149088,
+    "original_bytes": 263298,
+    "quality": 60,
+    "scale": 1.0
+  },
+  "photo1.jpeg": {
+    "original": "photo1.jpeg",
+    "webp": "photo1.webp",
+    "width": 1200,
+    "height": 1600,
+    "webp_bytes": 132200,
+    "original_bytes": 202324,
+    "quality": 80,
+    "scale": 1.0
+  },
+  "photo10.jpeg": {
+    "original": "photo10.jpeg",
+    "webp": "photo10.webp",
+    "width": 1200,
+    "height": 1600,
+    "webp_bytes": 127792,
+    "original_bytes": 214314,
+    "quality": 75,
+    "scale": 1.0
+  },
+  "photo11.jpeg": {
+    "original": "photo11.jpeg",
+    "webp": "photo11.webp",
+    "width": 1600,
+    "height": 1200,
+    "webp_bytes": 118058,
+    "original_bytes": 144914,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "photo12.JPG": {
+    "original": "photo12.JPG",
+    "webp": "photo12.webp",
+    "width": 540,
+    "height": 720,
+    "webp_bytes": 50706,
+    "original_bytes": 96640,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "photo14.JPG": {
+    "original": "photo14.JPG",
+    "webp": "photo14.webp",
+    "width": 540,
+    "height": 647,
+    "webp_bytes": 38554,
+    "original_bytes": 79975,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "photo2.jpeg": {
+    "original": "photo2.jpeg",
+    "webp": "photo2.webp",
+    "width": 1200,
+    "height": 1600,
+    "webp_bytes": 135226,
+    "original_bytes": 197729,
+    "quality": 80,
+    "scale": 1.0
+  },
+  "photo3.jpeg": {
+    "original": "photo3.jpeg",
+    "webp": "photo3.webp",
+    "width": 1200,
+    "height": 1600,
+    "webp_bytes": 144688,
+    "original_bytes": 245519,
+    "quality": 75,
+    "scale": 1.0
+  },
+  "photo4.jpeg": {
+    "original": "photo4.jpeg",
+    "webp": "photo4.webp",
+    "width": 1200,
+    "height": 1200,
+    "webp_bytes": 86272,
+    "original_bytes": 116903,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "photo5.jpeg": {
+    "original": "photo5.jpeg",
+    "webp": "photo5.webp",
+    "width": 1200,
+    "height": 1600,
+    "webp_bytes": 145654,
+    "original_bytes": 245594,
+    "quality": 75,
+    "scale": 1.0
+  },
+  "photo7.jpeg": {
+    "original": "photo7.jpeg",
+    "webp": "photo7.webp",
+    "width": 1200,
+    "height": 1600,
+    "webp_bytes": 60806,
+    "original_bytes": 96871,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "photo8.jpeg": {
+    "original": "photo8.jpeg",
+    "webp": "photo8.webp",
+    "width": 1200,
+    "height": 1600,
+    "webp_bytes": 75834,
+    "original_bytes": 118461,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "photo9.jpeg": {
+    "original": "photo9.jpeg",
+    "webp": "photo9.webp",
+    "width": 1600,
+    "height": 1200,
+    "webp_bytes": 139246,
+    "original_bytes": 175138,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "SA-autweek.JPG": {
+    "original": "SA-autweek.JPG",
+    "webp": "SA-autweek.webp",
+    "width": 540,
+    "height": 726,
+    "webp_bytes": 31474,
+    "original_bytes": 69132,
+    "quality": 85,
+    "scale": 1.0
+  },
+  "batteryprod.png": {
+    "original": "batteryprod.png",
+    "width": 275,
+    "height": 183,
+    "bytes": 141810
+  },
+  "busreg.png": {
+    "original": "busreg.png",
+    "width": 525,
+    "height": 524,
+    "bytes": 125899
+  },
+  "footer.png": {
+    "original": "footer.png",
+    "width": 168,
+    "height": 125,
+    "bytes": 16841
+  },
+  "logo.png": {
+    "original": "logo.png",
+    "width": 168,
+    "height": 125,
+    "bytes": 19424
+  },
+  "sample.png": {
+    "original": "sample.png",
+    "width": 559,
+    "height": 808,
+    "bytes": 271128
+  }
+}

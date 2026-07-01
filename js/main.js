@@ -6,7 +6,6 @@ import { initForms } from './components/forms.js';
 
 // Import utilities
 import { isInViewport } from './utils/helpers.js';
-import { showNotification } from './utils/notifications.js';
 
 /**
  * Initialize page-specific functionality
@@ -65,20 +64,6 @@ function initScrollAnimations() {
     });
 }
 
-/**
- * Handle form submission with notification
- * @param {Event} e - The submit event
- */
-function handleFormSubmit(e) {
-    e.preventDefault();
-    
-    // Show notification
-    showNotification('Thank you for your message. We will get back to you soon!');
-    
-    // Reset form
-    this.reset();
-}
-
 // Initialize the page when loaded
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initPage);
@@ -89,4 +74,3 @@ if (document.readyState === 'loading') {
 // Make functions available globally for legacy scripts
 window.initPage = initPage;
 window.animateChartBars = animateChartBars;
-window.handleFormSubmit = handleFormSubmit;
