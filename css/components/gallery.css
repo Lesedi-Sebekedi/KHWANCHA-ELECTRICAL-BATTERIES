@@ -20,6 +20,28 @@
     max-width: 420px;
 }
 
+/* Full-image galleries: centered masonry, whole pictures at natural ratio, no crop */
+.gallery-grid--full {
+    display: block;
+    columns: 4 250px;
+    column-gap: var(--spacing-md);
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.gallery-grid--full .gallery-item {
+    height: auto;
+    break-inside: avoid;
+    margin-bottom: var(--spacing-md);
+}
+
+.gallery-grid--full .gallery-item__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
 /* Gallery item */
 .gallery-item {
     border-radius: var(--border-radius);
