@@ -80,6 +80,7 @@
 .feature {
     background-color: var(--surface-alt);
     border: 1px solid var(--accent);
+    color: var(--dark);
     padding: var(--spacing-xl);
     border-radius: var(--border-radius);
     text-align: center;
